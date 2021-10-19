@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html>
-<html lang="en">
-<head>
-  <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <title>Portfolio Landing Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
 <body>
 <div class="container-fluid">
 <div class="container">
@@ -50,30 +35,106 @@
   <h1>Welcome: Art of Stranger</h1>
   <p>Hello, friend. I'm Stranger and this is my digital media arts portfolio. I am a second year college arts student deeply engaged with the exploration of concepts like magic and supernaturality in a digital context, the symbiosis of funtion and aesthetic quality, and the intricacies of grief, illness, and healing. My work spans both analog and digital media, however for the time being this website will function mainly as a showcase of digital works.Please feel free to click around and explore. Thank you for visiting and interacting with my work.</p>
  
- <div class="card">
-  <div class="card-header"><img src="images/wizardglitch.JPG" alt="text glitched image" style="width:550px;height:772px"></div>
-  <div class="card-body">Click "glitch" in navigation bar above for more like this</div>
-  <div class="card-footer">The Wizard- text edited glitch</div>
+</body>
+</html>
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <title>Portfolio Landing Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image/wizardglitch.JPG" alt="text glitched image" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/mememashup.jpg" alt="skeleton chair and existential Mickey mashup" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/minecraftmask_screenshot1of2.jpg" alt="in-game Minecreaft sculpture" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="images/minecraftsculpture.jpg" alt="3D printed Minecraft sculpture" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="images/netarthome.JPG" alt="home page of linking webpage poem" class="d-block" style="width:100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 </div>
-  <div class="card">
-  <div class="card-header"><img src="images/mememashup.jpg" alt="skeleton chair and existential Mickey mash-up" style="width:550px;height:772px"></div>
-  <div class="card-body">Click "meme" in navigation bar above for more like this</div>
-  <div class="card-footer">Corporeal Humor- meme mash-up project</div>
+
+<div class="container-fluid mt-3">
+  <h3>Carousel Example</h3>
+  <p>The following example shows how to create a basic carousel with indicators and controls.</p>
 </div>
-  <div class="card">
-  <div class="card-header"><img src="images/minecraftmask_screenshot1of2.jpg" alt="in-game Minecraft sculpture" style="width:684px;height:424.75px></div>
-  <div class="card-body">Click "minecraft" in navigation bar above for more like this</div>
-  <div class="card-footer">Momento- in-game Minecraft sculpture</div>
-</div>
-    <div class="card">
-  <div class="card-header"><img src="images/minecraftsculpture.jpg" alt="3D printed Minecraft sculpture" style="width:550px;height:772px"></div>
-  <div class="card-body">Click "3d-print" in navigation bar above for more like this</div>
-  <div class="card-footer">Momento- 3D printed Minecraft sculpture</div>
-</div>
-  <div class="card">
-  <div class="card-header"><img src="images/netarthome.JPG" alt="home page of linking web poem" style="width:684px;height:424.75px></div>
-  <div class="card-body">Click "net-art" in navigation bar above for more like this</div>
-  <div class="card-footer">Everything is Fine- linking webpage poetry</div>
-</div>
+  
+  <div class="container-fluid">
+<div class="container">
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="glitchart.html">glitch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mememashup.html">meme</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="minecraftsculpture">minecraft</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="minecraftsculpture_3dprinted.html">3d-print</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="netart.html">net-art</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="codeart.html">code art</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+  
+  <h1>Welcome: Art of Stranger</h1>
+  <p>Hello, friend. I'm Stranger and this is my digital media arts portfolio. I am a second year college arts student deeply engaged with the exploration of concepts like magic and supernaturality in a digital context, the symbiosis of funtion and aesthetic quality, and the intricacies of grief, illness, and healing. My work spans both analog and digital media, however for the time being this website will function mainly as a showcase of digital works.Please feel free to click around and explore. Thank you for visiting and interacting with my work.</p>
+
 </body>
 </html>
