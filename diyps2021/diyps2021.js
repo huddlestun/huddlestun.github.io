@@ -30,12 +30,11 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
- if (toolChoice == '1' ) {  // first tool
-   
-    stroke(01);
-   
-    ellipse(mouseX, mouseY, 10, 10);
-     line(mouseX, mouseY, pmouseX, pmouseY);
+if (toolChoice == '1' ) {  // first tool
+  
+   stroke(255); //white rays
+   fill(rgba(rgba 0, 86, 255, 0.2)); //light blue fill
+   triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
     
   } else if (toolChoice == '2') { // second tool
 
