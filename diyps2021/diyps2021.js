@@ -5,9 +5,10 @@ var screenbg = 240; // off white background
 
 function preload() {
 // preload() runs once, it may make you wait
-// img = loadImage('demon_eye.jpg');  // cat.jpg needs to be next to this .js file
-// you can link to an image on your github account
-img = loadImage('https://huddlestun.github.io/diyps2021/demon_eye.png');
+img = loadImage('demon_eye.png');
+img2 = loadImage('angel_eye.png');
+//img=loadImage('https://huddlestun.github.io/diyps2021/demon_eye.png');
+//img2= loadImage('https://huddlestun.github.io/diyps2021/angel_eye.png');
 }
 
 function setup() {
