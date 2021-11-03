@@ -81,6 +81,8 @@ if (toolChoice == '1' ) {  // first tool
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX-25, mouseY-25, 50, 50);
     
+  }else if (toolChoice == 'h' || toolChoice == 'H') { // h places the image we pre-loaded
+    image(img2, mouseX-25, mouseY-25, 50, 50);  
   }
  }
  
