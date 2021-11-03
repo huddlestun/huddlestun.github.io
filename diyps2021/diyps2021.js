@@ -33,7 +33,7 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
 if (toolChoice == '1' ) {  // first tool
   
    stroke(255); //white rays
-   fill(rgba(rgba 0, 86, 255, 0.2)); //light blue fill
+   fill(rgba 0, 86, 255, 0.2); //light blue fill
    triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
     
   } else if (toolChoice == '2') { // second tool
