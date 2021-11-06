@@ -1,10 +1,13 @@
 var img;
+//var img2;
 var initials ='meh'; // your initials
 var choice = '1'; // starting choice, so it is not empty
-var screenbg = 240; // off white background
+var screenbg = 0; // black background
 
 function preload() {
 // preload() runs once, it may make you wait
+// img = loadImage('demon_eye.jpg');  // cat.jpg needs to be next to this .js file
+// you can link to an image on your github account
 img = loadImage('demon_eye.png');
 img2 = loadImage('angel_eye.png');
 img3 = loadImage('redflames.png');
@@ -37,24 +40,22 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
-if (toolChoice == '1' ) {  // first tool
-  
+ if (toolChoice == '1' ) {  // first tool
    stroke(255); //white rays
    fill('blue'); //blue fill
    triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
-    
   } else if (toolChoice == '2') { // second tool
 
    strokeWeight(0.5);
- stroke(0); //black lines defining rays
- fill('red'); //red fill between black rays
+   stroke(0); //black lines defining rays
+   fill('red'); //red fill between black rays
     triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
   } else if (toolChoice == '3') { // third tool
 
-   image(img4, mouseX-25, mouseY-25, 50, 50);
+     image(img4, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '4') {
-
-   image(img3, mouseX-25, mouseY-25, 50, 50);
+      
+    image(img3, mouseX-25, mouseY-25, 50, 50);
   } else if (key == '5') { // this tool calls a function
     stroke(0, 0, 255);
     testbox(20, 20, 200);
@@ -66,8 +67,8 @@ if (toolChoice == '1' ) {  // first tool
 
     image(img2, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '7') {
-
-   image(img, mouseX-25, mouseY-25, 50, 50);
+       
+    image(img, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '8') {
 
     image(img5, mouseX-25, mouseY-25, 50, 50);
@@ -80,8 +81,9 @@ if (toolChoice == '1' ) {  // first tool
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
-    //ADD
-      
+    //ADD SOMETHING
+  } else if (toolChoice == 'h' || toolChoice == 'H') { // h places the image we pre-loaded
+    //ADD SOMETHING  
   }
  }
  
