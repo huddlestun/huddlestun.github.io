@@ -7,8 +7,12 @@ function preload() {
 // preload() runs once, it may make you wait
 img = loadImage('demon_eye.png');
 img2 = loadImage('angel_eye.png');
+img3 = loadImage('redflames.png');
+img4 = loadImage('blueflames.png');
 //img=loadImage('https://huddlestun.github.io/diyps2021/demon_eye.png');
 //img2= loadImage('https://huddlestun.github.io/diyps2021/angel_eye.png');
+//img3= loadImage('https://huddlestun.github.io/diyps2021/redflames.png');
+//img4= loadImage('https://huddlestun.github.io/diyps2021/blueflames.png');
 }
 
 function setup() {
@@ -45,12 +49,10 @@ if (toolChoice == '1' ) {  // first tool
     triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
   } else if (toolChoice == '3') { // third tool
 
-    stroke(300, 100, 0, 80);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+   image(img4, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '4') {
 
-    stroke(0, 0, 255);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+   image(img3, mouseX-25, mouseY-25, 50, 50);
   } else if (key == '5') { // this tool calls a function
     stroke(0, 0, 255);
     testbox(20, 20, 200);
@@ -60,12 +62,10 @@ if (toolChoice == '1' ) {  // first tool
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
 
-    stroke(200);
-    line(mouseX, mouseY, pmouseX, pmouseY);
+    image(img2, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '7') {
 
-    fill(100, 200, 100);
-    rect(mouseX, mouseY, 20, 20);
+   image(img, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '8') {
 
     fill(300, 100, 0, 80);
@@ -79,10 +79,8 @@ if (toolChoice == '1' ) {  // first tool
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
-    image(img, mouseX-25, mouseY-25, 50, 50);
-    
-  }else if (toolChoice == 'h' || toolChoice == 'H') { // h places the image we pre-loaded
-    image(img2, mouseX-25, mouseY-25, 50, 50);  
+    //ADD
+      
   }
  }
  
