@@ -9,10 +9,12 @@ img = loadImage('demon_eye.png');
 img2 = loadImage('angel_eye.png');
 img3 = loadImage('redflames.png');
 img4 = loadImage('blueflames.png');
+img5 = loadImage('star.png');
 //img=loadImage('https://huddlestun.github.io/diyps2021/demon_eye.png');
 //img2= loadImage('https://huddlestun.github.io/diyps2021/angel_eye.png');
 //img3= loadImage('https://huddlestun.github.io/diyps2021/redflames.png');
 //img4= loadImage('https://huddlestun.github.io/diyps2021/blueflames.png');
+//img5= loadImage('https://huddlestun.github.io/diyps2021/star.png');
 }
 
 function setup() {
@@ -68,8 +70,7 @@ if (toolChoice == '1' ) {  // first tool
    image(img, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '8') {
 
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 20, 20);
+    image(img5, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '9') {
 
     fill(300, 100, 0, 80);
