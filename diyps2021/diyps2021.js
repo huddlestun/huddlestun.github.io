@@ -2,7 +2,7 @@ var img;
 //var img2;
 var initials ='meh'; // your initials
 var choice = '1'; // starting choice, so it is not empty
-var screenbg = 0; // black background
+var screenbg = 'black'; // black background
 
 function preload() {
 // preload() runs once, it may make you wait
