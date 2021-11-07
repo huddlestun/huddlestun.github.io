@@ -1,5 +1,10 @@
 var img;
-//var img2;
+var img2;
+var img3;
+var img4;
+var img5;
+var img6;
+var img7;
 var initials ='meh'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 'black'; // black background
