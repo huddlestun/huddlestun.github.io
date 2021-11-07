@@ -13,11 +13,15 @@ img2 = loadImage('angel_eye.png');
 img3 = loadImage('redflames.png');
 img4 = loadImage('blueflames.png');
 img5 = loadImage('star.png');
+img6 = loadImage('blackstar.png');
+img7 = loadImage('candle.png');
 //img=loadImage('https://huddlestun.github.io/diyps2021/demon_eye.png');
 //img2= loadImage('https://huddlestun.github.io/diyps2021/angel_eye.png');
 //img3= loadImage('https://huddlestun.github.io/diyps2021/redflames.png');
 //img4= loadImage('https://huddlestun.github.io/diyps2021/blueflames.png');
 //img5= loadImage('https://huddlestun.github.io/diyps2021/star.png');
+//img6= loadImage('https://huddlestun.github.io/diyps2021/blackstar.png');
+//img7= loadImage('https://huddlestun.github.io/diyps2021/candle.png');
 }
 
 function setup() {
@@ -41,14 +45,14 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // graphic function
 
  if (toolChoice == '1' ) {  // first tool
-   stroke(255); //white rays
-   fill('blue'); //blue fill
+   stroke('blue'); //white rays
+   fill('black'); //grey fill
    triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
   } else if (toolChoice == '2') { // second tool
 
    strokeWeight(0.5);
-   stroke(0); //black lines defining rays
-   fill('red'); //red fill between black rays
+   stroke('red'); //red lines defining rays
+   fill('black'); //black fill between red rays
     triangle(mouseX, mouseY, 300, 200, pmouseX,pmouseY); //anchored @ center for now
   } else if (toolChoice == '3') { // third tool
 
@@ -57,10 +61,9 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
       
     image(img3, mouseX-25, mouseY-25, 50, 50);
   } else if (key == '5') { // this tool calls a function
-    stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
-    
+    stroke(0);
+    testbox(0, 255, 255);
+    testbox(200, 500, 20, 0);
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
@@ -73,18 +76,14 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
 
     image(img5, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '9') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
+    image(img6, mouseX-25, mouseY-25, 50, 50);
   } else if (toolChoice == '0') {
-    stroke(0, 0);
-    fill(random(255), random(255), random(255), random(255));
-    rect(mouseX, mouseY, 200, 150);
+    stroke(0, 0, 0, 0);
+    fill(0, 0, 0, 10);
+   rect(mouseX, mouseY, 100, 100);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
-    //ADD SOMETHING
-  } else if (toolChoice == 'h' || toolChoice == 'H') { // h places the image we pre-loaded
-    //ADD SOMETHING  
-  }
+   image(img7, mouseX-25, mouseY-25, 50, 50);
+  } 
  }
  
 function testbox(r, g, b) {
@@ -92,7 +91,7 @@ function testbox(r, g, b) {
   x = mouseX;
   y = mouseY;
   fill(r, g, b);
-  rect(x-50, y-50, 100, 100);
+  rect(x-10, y-10, 20, 20);
 
 }
 
