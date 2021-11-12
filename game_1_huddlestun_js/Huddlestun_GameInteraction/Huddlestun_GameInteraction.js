@@ -30,6 +30,10 @@ function setup() {
   if(gameState == "Win"){ //name last window and tell what to run when gamestate called
   WinPage(); //call final winner page
   }
+    
+  if (mouseX < 50 && mouseY < 50) {
+    cursor('https://huddlestun.github.io/magpie_cursor.png');
+  }
   
   text(("Score: " + score),width/2,40); //text for score will add one point to starting number (0), sets width of score insert
 } //end of draw ==============================================================================================================
