@@ -18,6 +18,7 @@ function setup() {
   
   function draw() {
   background(220); //sets background color, currently light grey
+  
   if(gameState == "L1"){
   levelOne(); //call first level 
 }
@@ -30,7 +31,7 @@ function setup() {
   if(gameState == "Win"){ //name last window and tell what to run when gamestate called
   WinPage(); //call final winner page
   }
-    
+  
   if (mouseX < 50 && mouseY < 50) {
     cursor('https://huddlestun.github.io/magpie_cursor.png');
   }
@@ -40,7 +41,7 @@ function setup() {
 
 function levelOne(){ //start level one
   text("Level 1", width/2,height-20); //names level one, text orientation center near bottom
-  var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
