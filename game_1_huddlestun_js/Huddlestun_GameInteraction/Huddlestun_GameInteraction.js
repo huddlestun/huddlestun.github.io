@@ -1,4 +1,7 @@
 var img;
+var penny;
+var jewels;
+var treasure;
 var ballx = 300; //sets opening ball x orientation (horizontal)
 var bally = 300; //sets opening ball y orientation (vertical)
 var ballSize = 100; //sets ball size (circle)
@@ -9,6 +12,8 @@ function preload() {
 // preload() runs once, it may make you wait
 // you can link to an image on your github account
 img=loadImage('https://huddlestun.github.io/magpie.png');
+penny=loadImage('https://huddlestun.github.io/penny.png');
+jewels=loadImage('https://huddlestun.github.io/diamond.png');
 }
 function setup() {
   createCanvas(600, 600); //canvas size
@@ -33,7 +38,10 @@ function setup() {
   }
   
   if (mouseX < 50 && mouseY < 50) {
-    cursor('https://huddlestun.github.io/magpie_cursor.png');
+    cursor('https://huddlestun.github.io/magpie_cursor.png', 50, 20);
+  }
+  else if (gameState > "L1"){
+    cursor(CROSS);
   }
   
   text(("Score: " + score),width/2,40); //text for score will add one point to starting number (0), sets width of score insert
@@ -52,7 +60,7 @@ function levelOne(){ //start level one
      //fill(random(255));
    }
    
-  image(img,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
+  image(penny,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
   line(ballx + ballSize/2, bally + ballSize/2, mouseX, mouseY); //draw line over ball connecting mouse to ball's center, helps with ease at early rounds, shows mouse-ball directionality
   
 } // end of level 1 =========================================================================================================================================
