@@ -1,7 +1,7 @@
 var img;
 var ballx = 300; //sets opening ball x orientation (horizontal)
 var bally = 300; //sets opening ball y orientation (vertical)
-var ballSize = 70; //sets ball size (circle)
+var ballSize = 200; //sets ball size (circle)
 var score = 0; //score begins at zero
 var gameState = "L1"; //game begins at gamestate L1, the first level
 
