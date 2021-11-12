@@ -79,7 +79,7 @@ function levelTwo(){ //start level two
     // fill(random(255)); //when score>5 background color will randomly flash different greyscale values **epilepsy warning**
    }
    
-  ellipse(ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
+ image(jewels,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
   
 } // end of level 2 =========================================================================================================================================
 
