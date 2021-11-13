@@ -18,7 +18,6 @@ penny=loadImage('https://huddlestun.github.io/penny.png');
 necklace=loadImage('https://huddlestun.github.io/necklace.png');
 jewels=loadImage('https://huddlestun.github.io/diamond.png');
 crown=loadImage('https://huddlestun.github.io/crown.png');
-moon=loadImage('https://huddlestun.github.io/moon.png');
 }
 function setup() {
   createCanvas(600, 600); //canvas size
@@ -47,6 +46,9 @@ function setup() {
   
   if (mouseX < 50 && mouseY < 50) {
     cursor('https://huddlestun.github.io/magpie_cursor.png', 50, 20);
+  }
+  else if (gameState > "L5"){
+    cursor(CROSS);
   }
   
   text(("Score: " + score),width/2,40); //text for score will add one point to starting number (0), sets width of score insert
