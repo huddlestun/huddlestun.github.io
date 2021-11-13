@@ -61,7 +61,6 @@ function levelOne(){ //start level one
    }
    
   image(penny,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
-  line(ballx + ballSize/2, bally + ballSize/2, mouseX, mouseY); //draw line over ball connecting mouse to ball's center, helps with ease at early rounds, shows mouse-ball directionality
   
 } // end of level 1 =========================================================================================================================================
 
