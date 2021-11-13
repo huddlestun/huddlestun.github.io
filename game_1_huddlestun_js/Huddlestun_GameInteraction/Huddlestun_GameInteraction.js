@@ -1,7 +1,9 @@
 var img;
 var penny;
+var necklace;
 var jewels;
-var treasure;
+var crown;
+var moon;
 var ballx = 300; //sets opening ball x orientation (horizontal)
 var bally = 300; //sets opening ball y orientation (vertical)
 var ballSize = 100; //sets ball size (circle)
@@ -13,7 +15,10 @@ function preload() {
 // you can link to an image on your github account
 img=loadImage('https://huddlestun.github.io/magpie.png');
 penny=loadImage('https://huddlestun.github.io/penny.png');
+necklace=loadImage('https://huddlestun.github.io/necklace.png');
 jewels=loadImage('https://huddlestun.github.io/diamond.png');
+crown=loadImage('https://huddlestun.github.io/crown.png');
+moon=loadImage('https://huddlestun.github.io/moon.png');
 }
 function setup() {
   createCanvas(600, 600); //canvas size
@@ -33,6 +38,9 @@ function setup() {
   if(gameState == "L3"){ //name next level and tell what to run when gamestate called
     levelThree(); //call third level
   }
+  if(gameState == "L4"){
+    levelFour();
+  }
   if(gameState == "Win"){ //name last window and tell what to run when gamestate called
   WinPage(); //call final winner page
   }
@@ -40,7 +48,7 @@ function setup() {
   if (mouseX < 50 && mouseY < 50) {
     cursor('https://huddlestun.github.io/magpie_cursor.png', 50, 20);
   }
-  else if (gameState > "L1"){
+  else if (gameState > "L5"){
     cursor(CROSS);
   }
   
@@ -55,7 +63,7 @@ function levelOne(){ //start level one
    bally = random(height); //move to random place on y axis
     score = score + 1; //tally an extra score point every time this happens
    }
-   if(score>= 5){ //establishes transition to next level at greater than five points (ie next level starts at six)
+   if(score>= 10){ //establishes transition to next level at greater than five points (ie next level starts at six)
      gameState = "L2";
      //fill(random(255));
    }
@@ -73,12 +81,12 @@ function levelTwo(){ //start level two
    bally = random(height); //move to random place on y axis
     score = score + 1; //tally an extra score point every time this happens
    }
-   if(score>= 10){ //establishes transition to next level at greater than ten points (ie next level starts at six)
+   if(score>= 20){ //establishes transition to next level at greater than ten points (ie next level starts at six)
     gameState = "L3";
     // fill(random(255)); //when score>5 background color will randomly flash different greyscale values **epilepsy warning**
    }
    
- image(jewels,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
+ image(necklace,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
   
 } // end of level 2 =========================================================================================================================================
 
@@ -90,17 +98,37 @@ function levelThree(){ //start level three
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
    score = score + 1; //tally an extra score point every time this happens
-   ballSize = ballSize - 1; //ball size will decrease by one each time the mouse interacts within the specified radius
+  // ballSize = ballSize - 5; //ball size will decrease by one each time the mouse interacts within the specified radius
  }
    
-   if(score>= 50){ //establishes transition to next level at greater than ten points (ie next level starts at six)
-    gameState = "Win";
+   if(score>= 30){ //establishes transition to next level at greater than ten points (ie next level starts at six)
+    gameState = "L4";
     // fill(random(255)); //when score>5 background color will randomly flash different greyscale values **epilepsy warning**
    } //background(random(255)); //sets background to flash random blocks of greyscale color **epilepsy warning**
      
-   ellipse(ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
+  image(jewels,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
 
 } // end of level 3 =========================================================================================================================================
+
+function levelFour(){ //start level three
+  background(0,100,200);
+  text("Level 4", width/2,height-20); //names level four, text orientation center near bottom
+  var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
+   ballx = random(width); //move to random place on x axis
+   bally = random(height); //move to random place on y axis
+   score = score + 1; //tally an extra score point every time this happens
+   ballSize = ballSize - 5; //ball size will decrease by one each time the mouse interacts within the specified radius
+ }
+   
+   if(score>= 40){ //establishes transition to next level at greater than ten points (ie next level starts at six)
+    gameState = "L5";
+    // fill(random(255)); //when score>5 background color will randomly flash different greyscale values **epilepsy warning**
+   } //background(random(255)); //sets background to flash random blocks of greyscale color **epilepsy warning**
+     
+  image(crown,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
+
+} // end of level 4 =========================================================================================================================================
 
 function WinPage(){ //start win page
   background(255,0,0);
