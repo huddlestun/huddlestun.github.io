@@ -11,6 +11,7 @@ var sparkle2;
 var crystal;
 var crystalback;
 var starnight;
+var crystal_end;
 var ballx = 300; //sets opening ball x orientation (horizontal)
 var bally = 300; //sets opening ball y orientation (vertical)
 var ballSize = 100; //sets ball size (circle)
@@ -33,6 +34,7 @@ sparkle2=loadImage('https://huddlestun.github.io/spaarkle2.png');
 crystal=loadImage('https://huddlestun.github.io/crystal.png');
 crystalback=loadImage('https://huddlestun.github.io/crystalbackground.png');
 starnight=loadImage('https://huddlestun.github.io/starnight.png');
+crystal_end=loadImage('https://huddlestun.github.io/crystal_end.png');
 }
 function setup() {
   createCanvas(600, 600); //canvas size
@@ -64,13 +66,15 @@ function setup() {
      
    }
    else if(gameState == "Win"){
-     background(crystal_back, 200); 
+     background(crystal_end, 200); 
      
    }
+   
    
     if(gameState == "Title"){
   TitlePage(); //call title page 
 }
+
   if(gameState == "L1"){
   levelOne(); //call first level 
 }
@@ -88,6 +92,14 @@ function setup() {
   }
   if(gameState == "Win"){ //name last window and tell what to run when gamestate called
   WinPage(); //call final winner page
+  }
+  
+  if(gameState == "Bonus1"){
+    Bonus1();
+  }
+  
+  if(gameState == "Bonus2"){
+    Bonus2();
   }
   
   if (mouseX < 50 && mouseY < 50) {
@@ -199,7 +211,7 @@ function levelFive(){ //start level five
 } // end of level 5 =========================================================================================================================================
 
 function WinPage(){ //start win page
- 
-  text("Winner!", width/2,height-20); //names win page, text orientation center near bottom
- 
-} //end winner screen ===========================================================================================================================
+text("Winner! You stole the shinest prize- the moon!", width/2,height-20,); //names level one, text orientation center near bottom
+fill(255);
+  
+} // end of title page =========================================================================================================================================
