@@ -63,6 +63,10 @@ function setup() {
      background(starnight, 200); 
      
    }
+   else if(gameState == "Win"){
+     background(crystal_back, 200); 
+     
+   }
    
     if(gameState == "Title"){
   TitlePage(); //call title page 
@@ -94,7 +98,8 @@ function setup() {
 } //end of draw ==============================================================================================================
 
 function TitlePage(){ //start title page
-text("Ooh, shiny! Find and toggle over the safety pin to begin", width/2,height-20); //names level one, text orientation center near bottom
+text("Ooh, shiny! Find and toggle over the safety pin to begin", width/2,height-20,); //names level one, text orientation center near bottom
+fill(255);
   var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
      gameState = "L1";
@@ -194,7 +199,7 @@ function levelFive(){ //start level five
 } // end of level 5 =========================================================================================================================================
 
 function WinPage(){ //start win page
-  background(255,0,0);
+ 
   text("Winner!", width/2,height-20); //names win page, text orientation center near bottom
  
 } //end winner screen ===========================================================================================================================
