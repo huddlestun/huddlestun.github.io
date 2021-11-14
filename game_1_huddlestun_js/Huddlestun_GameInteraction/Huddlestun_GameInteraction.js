@@ -1,5 +1,5 @@
 var img;
-var sparkle_intro;
+var crystal_back;
 var pin;
 var penny;
 var necklace;
@@ -21,7 +21,7 @@ function preload() {
 // preload() runs once, it may make you wait
 // you can link to an image on your github account
 img=loadImage('https://huddlestun.github.io/magpie.png');
-sparkle_intro=loadImage('https://huddlestun.github.io/crystal_back.png');
+crystal_back=loadImage('https://huddlestun.github.io/crystal_back.png');
 pin=loadImage('https://huddlestun.github.io/safetypin_true.png');
 penny=loadImage('https://huddlestun.github.io/penny.png');
 necklace=loadImage('https://huddlestun.github.io/necklace.png');
