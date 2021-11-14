@@ -4,6 +4,10 @@ var necklace;
 var jewels;
 var crown;
 var moon;
+var sparkle;
+var sparkle2;
+var crystal;
+var crystalback;
 var ballx = 300; //sets opening ball x orientation (horizontal)
 var bally = 300; //sets opening ball y orientation (vertical)
 var ballSize = 100; //sets ball size (circle)
@@ -19,6 +23,10 @@ necklace=loadImage('https://huddlestun.github.io/necklace.png');
 jewels=loadImage('https://huddlestun.github.io/diamond.png');
 crown=loadImage('https://huddlestun.github.io/crown.png');
 moon=loadImage('https://huddlestun.github.io/moon.png');
+sparkle=loadImage('https://huddlestun.github.io/sparkle.png');
+sparkle2=loadImage('https://huddlestun.github.io/spaarkle2.png');
+crystal=loadImage('https://huddlestun.github.io/crystal.png');
+crystalback=loadImage('https://huddlestun.github.io/crystalbackground.png');
 }
 function setup() {
   createCanvas(600, 600); //canvas size
@@ -27,8 +35,20 @@ function setup() {
 } //end of setup ============================================================================================================
   
   function draw() {
-  background(220); //sets background color, currently light grey
-  
+   if(gameState == "L1"){
+   background(sparkle, 255); //sets background color, currently light grey
+   }
+   else if(gameState == "L2"){
+     background(sparkle2, 255); 
+    }
+    else if(gameState == "L3"){
+     background(crystal, 255); 
+    }
+   
+    else if(gameState == "L4"){
+     background(crystalback, 255); 
+     
+   }
   if(gameState == "L1"){
   levelOne(); //call first level 
 }
@@ -76,7 +96,6 @@ function levelOne(){ //start level one
 } // end of level 1 =========================================================================================================================================
 
 function levelTwo(){ //start level two
-  background(200,100,0);
   text("Level 2", width/2,height-20); //names level two, text orientation center near bottom
   var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
@@ -94,7 +113,6 @@ function levelTwo(){ //start level two
 } // end of level 2 =========================================================================================================================================
 
 function levelThree(){ //start level three
-  background(0,100,200);
   text("Level 3", width/2,height-20); //names level three, text orientation center near bottom
   var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
@@ -114,7 +132,6 @@ function levelThree(){ //start level three
 } // end of level 3 =========================================================================================================================================
 
 function levelFour(){ //start level four
-  background(0,100,200);
   text("Level 4", width/2,height-20); //names level four, text orientation center near bottom
   var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
