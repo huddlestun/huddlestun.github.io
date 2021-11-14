@@ -199,6 +199,7 @@ function levelFive(){ //start level five
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
    score = score + 1; //tally an extra score point every time this happens
+   ballSize = ballSize - 5; //ball size will decrease by one each time the mouse interacts within the specified radius
   }
    
    if(score>= 50){ //establishes transition to next level at greater than fifty points (ie next level starts at fifty one)
