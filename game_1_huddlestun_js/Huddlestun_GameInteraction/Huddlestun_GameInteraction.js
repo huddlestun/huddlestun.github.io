@@ -1,4 +1,5 @@
 var img;
+var pin;
 var penny;
 var necklace;
 var jewels;
@@ -8,16 +9,18 @@ var sparkle;
 var sparkle2;
 var crystal;
 var crystalback;
+var starnight;
 var ballx = 300; //sets opening ball x orientation (horizontal)
 var bally = 300; //sets opening ball y orientation (vertical)
 var ballSize = 100; //sets ball size (circle)
 var score = 0; //score begins at zero
-var gameState = "L1"; //game begins at gamestate L1, the first level
+var gameState = "Title"; //game begins at gamestate L1, the first level
 
 function preload() {
 // preload() runs once, it may make you wait
 // you can link to an image on your github account
 img=loadImage('https://huddlestun.github.io/magpie.png');
+pin=loadImage('https://huddlestun.github.io/safetypin_true.png');
 penny=loadImage('https://huddlestun.github.io/penny.png');
 necklace=loadImage('https://huddlestun.github.io/necklace.png');
 jewels=loadImage('https://huddlestun.github.io/diamond.png');
@@ -27,6 +30,7 @@ sparkle=loadImage('https://huddlestun.github.io/sparkle.png');
 sparkle2=loadImage('https://huddlestun.github.io/spaarkle2.png');
 crystal=loadImage('https://huddlestun.github.io/crystal.png');
 crystalback=loadImage('https://huddlestun.github.io/crystalbackground.png');
+starnight=loadImage('https://huddlestun.github.io/starnight.png');
 }
 function setup() {
   createCanvas(600, 600); //canvas size
@@ -49,6 +53,14 @@ function setup() {
      background(crystalback, 255); 
      
    }
+   else if(gameState == "L5"){
+     background(starnight, 200); 
+     
+   }
+   
+    if(gameState == "Title"){
+  TitlePage(); //call title page 
+}
   if(gameState == "L1"){
   levelOne(); //call first level 
 }
@@ -71,13 +83,20 @@ function setup() {
   if (mouseX < 50 && mouseY < 50) {
     cursor('https://huddlestun.github.io/magpie_cursor.png', 50, 20);
   }
-  else if (gameState > "L5"){
-    cursor(CROSS);
-  }
   
   text(("Score: " + score),width/2,40); //text for score will add one point to starting number (0), sets width of score insert
 } //end of draw ==============================================================================================================
 
+function TitlePage(){ //start title page
+text("Find and toggle over the magpie to begin", width/2,height-20); //names level one, text orientation center near bottom
+  var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
+     gameState = "L1";
+   }
+   
+  image(pin,ballx,bally, ballSize, ballSize); //draw circle (this is the ball) to fit the dimensions established as var at top of code page
+  
+} // end of title page =========================================================================================================================================
 function levelOne(){ //start level one
   text("Level 1", width/2,height-20); //names level one, text orientation center near bottom
   var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
@@ -151,7 +170,6 @@ function levelFour(){ //start level four
 } // end of level 4 =========================================================================================================================================
 
 function levelFive(){ //start level five
-  background(0,100,200);
   text("Level 5", width/2,height-20); //names level four, text orientation center near bottom
   var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
