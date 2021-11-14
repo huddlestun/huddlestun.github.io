@@ -112,7 +112,7 @@ function setup() {
 function TitlePage(){ //start title page
 text("Ooh, shiny! Find and toggle over the safety pin to begin", width/2,height-20,); //names level one, text orientation center near bottom
 fill(255);
-  var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  var distToBall = dist(ballx + ballSize/2,bally + ballSize/2, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
      gameState = "L1";
    }
@@ -122,7 +122,7 @@ fill(255);
 } // end of title page =========================================================================================================================================
 function levelOne(){ //start level one
   text("Level 1", width/2,height-20); //names level one, text orientation center near bottom
-  var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+ var distToBall = dist(ballx + ballSize/2,bally + ballSize/2, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
@@ -139,7 +139,7 @@ function levelOne(){ //start level one
 
 function levelTwo(){ //start level two
   text("Level 2", width/2,height-20); //names level two, text orientation center near bottom
-  var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  var distToBall = dist(ballx + ballSize/2,bally + ballSize/2, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
@@ -156,7 +156,7 @@ function levelTwo(){ //start level two
 
 function levelThree(){ //start level three
   text("Level 3", width/2,height-20); //names level three, text orientation center near bottom
-  var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  var distToBall = dist(ballx + ballSize/2,bally + ballSize/2, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
@@ -175,7 +175,7 @@ function levelThree(){ //start level three
 
 function levelFour(){ //start level four
   text("Level 4", width/2,height-20); //names level four, text orientation center near bottom
-  var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+ var distToBall = dist(ballx + ballSize/2,bally + ballSize/2, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
@@ -194,7 +194,7 @@ function levelFour(){ //start level four
 
 function levelFive(){ //start level five
   text("Level 5", width/2,height-20); //names level four, text orientation center near bottom
-  var distToBall = dist(ballx,bally,mouseX,mouseY); //provides distance definition when "distToBall" is referenced
+  var distToBall = dist(ballx + ballSize/2,bally + ballSize/2, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
    ballx = random(width); //move to random place on x axis
    bally = random(height); //move to random place on y axis
