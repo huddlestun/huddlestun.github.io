@@ -43,7 +43,7 @@ function setup() {
   function draw() {
     
    if(gameState == "Title"){
-     background(sparkle_intro, 255);
+     background(crystal_back, 255);
    }
    else if(gameState == "L1"){
    background(sparkle, 255); //sets background color, currently light grey
@@ -94,7 +94,7 @@ function setup() {
 } //end of draw ==============================================================================================================
 
 function TitlePage(){ //start title page
-text("Find and toggle over the magpie to begin", width/2,height-20); //names level one, text orientation center near bottom
+text("Ooh, shiny! Find and toggle over the safety pin to begin", width/2,height-20); //names level one, text orientation center near bottom
   var distToBall = dist(ballx,bally, mouseX,mouseY); //provides distance definition when "distToBall" is referenced
   if(distToBall < ballSize/2){ //directions for ball to move relative to closeness of mouse to ball
      gameState = "L1";
