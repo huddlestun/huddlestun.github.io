@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <title>Code Art</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="container">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="glitchart.html">glitch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mememashup.html">meme</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="minecraftsculpture.html">minecraft</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="minecraftsculpture_3dprinted.html">3d-print</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="netart.html">net-art</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link active" href="codeart.html">code art</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="diyps.html">diyps</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="game.html">game</a>
+      </li>
+         <li class="nav-item">
+         <a class="nav-link" href="aiandart.html">ai-and-art</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="final.html">final</a>
+	  </li>
+    </ul>
+  </div>
+
+</nav>
+  <div class="container-fluid mt-3 container p-5 my-5 bg-dark text-white">
+  <h1>Code Art p5.js Self-Portrait: Full Code Below</h1>
+<br>
+  <p>This is a self-portrait drawn purely with the code language p5.js. Using lines, dots, rectangles, triangles, circles, and custom vertex-plotted shapes gridded onto a 600x600 canvas, I've constructed a stylized snapshot of how I look in this early phase of my work in digital media art.</p>
+ <br>
+    <iframe src="ART74_SelfPortrait/index.html" class="mx-auto d-block" style="height:600px;width:600px;" style="border:2px solid white;" style=" title="p5.js Self Portrait"></iframe>
+<pre>function setup() {
+createCanvas(600, 600);
+strokeWeight(2); 
+ellipseMode(RADIUS);
+angleMode(DEGREES);
+}
+function draw() {
+background('rgb(1792%,0%,0%)'); //set background to a strong red
+//any right or left directional notes are based on the viewer's right and left
+//background lines vertcal
+line(50, 0, 50, 600);
+line(100, 0, 100, 600);
+line(150, 0, 150, 600);
+line(200, 0, 200, 600);
+line(250, 0, 250, 600);
+line(300, 0, 300, 600);
+line(350, 0, 350, 600);
+line(400, 0, 400, 600);
+line(450, 0, 450, 600);
+line(500, 0, 500, 600);
+line(550, 0, 550, 600);
+line(600, 0, 600, 600);
+//background lines horizontal
+line(0, 50, 600, 50);
+line(0, 100, 600, 100);
+line(0, 150, 600, 150);
+line(0, 200, 600, 200);
+line(0, 250, 600, 250);
+line(0, 300, 600, 300);
+line(0, 350, 600, 350);
+line(0, 400, 600, 400);
+line(0, 450, 600, 450);
+line(0, 500, 600, 500);
+line(0, 550, 600, 550);
+line(0, 600, 600, 600);
+//neck
+beginShape();
+fill(210);
+vertex(260,370);
+vertex(300, 400);
+vertex(440, 350);
+vertex(440, 600);
+vertex(260, 600);
+endShape(CLOSE);
+//neck under shadow
+beginShape();
+fill(100);
+vertex(260,370);
+vertex(300, 400);
+vertex(440, 350);
+vertex(440, 370);
+vertex(300, 420);
+vertex(260,380);
+endShape(CLOSE);
+//Face Shape container
+beginShape();
+fill(235);
+vertex(300, 400);
+vertex(250, 370);
+vertex(220, 350);
+vertex(220, 130);
+vertex(300, 80);
+vertex(440, 100);
+vertex(470, 150);
+vertex(450, 350);
+endShape(CLOSE);
+//hoodie neckline
+beginShape();
+fill(0);
+vertex(260,400);
+vertex(300, 450);
+vertex(445, 400);
+vertex(445, 600);
+vertex(260, 600);
+endShape(CLOSE);
+//right side hood
+beginShape();
+fill(100);
+vertex(260,450);
+vertex(300, 500);
+vertex(440, 450);
+vertex(440, 390);
+vertex(500, 390);
+vertex(570, 500);
+vertex(570, 570);
+vertex(445, 580);
+vertex(300, 500);
+endShape(CLOSE);
+//left side hood
+beginShape();
+fill(100);
+vertex(300,500);
+vertex(250, 540);
+vertex(230, 520);
+vertex(190, 490);
+vertex(190, 430);
+vertex(260, 410);
+vertex(260, 480);
+endShape(CLOSE);
+//hoodie torso
+beginShape();
+fill(30);
+vertex(300, 500);
+vertex(445, 580);
+vertex(570, 570);
+vertex(570, 520);
+vertex(600, 550);
+vertex(600, 600);
+vertex(100, 600);
+vertex(120, 570);
+vertex(130, 500);
+vertex(190, 480);
+endShape(CLOSE);
+//hat
+beginShape();
+fill(0);
+vertex(220, 130);
+vertex(300, 80);
+vertex(440, 100);
+vertex(470, 150);
+vertex(460, 250);
+vertex(457, 280);
+vertex(470, 280);
+vertex(500, 150);
+vertex(500, 90);
+vertex(440, 30);
+vertex(300, 10);
+vertex(230, 80);
+vertex(200, 130);
+vertex(220, 180);
+endShape(CLOSE);
+//hat outer brim
+beginShape();
+fill(40);
+vertex(220, 130);
+vertex(300, 80);
+vertex(440, 100);
+vertex(470, 150);
+vertex(470, 165);
+vertex(470, 220);
+vertex(440, 160);
+vertex(300, 140);
+vertex(230, 170);
+vertex(220, 190);
+endShape(CLOSE);
+//hat patch
+beginShape();
+fill(60);
+vertex(250, 120);
+vertex(300, 90);
+vertex(400, 105);
+vertex(400, 145);
+vertex(300, 130);
+vertex(250, 150);
+endShape(CLOSE);
+//ear
+beginShape();
+fill(220);
+vertex(455, 310);
+vertex(470, 320);
+vertex(480, 295);
+vertex(470, 280);
+vertex(458, 280);
+endShape(CLOSE);
+//left eyebrow
+beginShape();
+fill(30);
+vertex(240, 190);
+vertex(300, 200);
+vertex(295, 210);
+vertex(240, 200);
+vertex(230, 210);
+endShape(CLOSE);
+//right eyebrow
+beginShape();
+fill(30);
+vertex(430, 215);
+vertex(410, 190);
+vertex(335, 200);
+vertex(338, 213);
+vertex(410, 203);
+endShape(CLOSE);
+// nose outer edge
+fill(190);
+triangle(295, 210, 305, 260, 290, 295);
+// nose bottom shadow
+beginShape();
+fill(230);
+vertex(290, 295);
+vertex(313, 310);
+vertex(335, 300);
+vertex(313, 305);
+endShape(CLOSE);
+// top lip
+beginShape();
+fill(170);
+vertex(295, 320);
+vertex(270, 335);
+vertex(260, 330);
+vertex(270, 335);
+vertex(295, 330);
+vertex(310, 335);
+vertex(330, 330);
+vertex(360, 340);
+vertex(370, 335);
+vertex(360, 335);
+vertex(330, 317);
+vertex(310, 322);
+endShape(CLOSE);
+// bottom lip shadow
+triangle(290, 350, 310, 355, 330, 350);
+// right eye upper lid
+beginShape();
+fill(200);
+vertex(350, 240);
+vertex(365, 217);
+vertex(385, 220);
+vertex(400, 240);
+endShape(CLOSE);
+// right eye external
+beginShape();
+fill(255);
+vertex(350, 240);
+vertex(365, 227);
+vertex(385, 230);
+vertex(400, 240);
+vertex(375, 250);
+endShape(CLOSE);
+// left eye upper lid
+beginShape();
+fill(200);
+vertex(239, 240);
+vertex(255, 217);
+vertex(275, 220);
+vertex(290, 240);
+endShape(CLOSE);
+//left eye external
+beginShape();
+fill(255);
+vertex(265, 250);
+vertex(290, 240);
+vertex(275, 230);
+vertex(255, 227);
+vertex(240, 240);
+endShape(CLOSE);
+// left eye internal
+beginShape();
+fill(0);
+vertex(255, 228);
+vertex(260, 240);
+vertex(265, 250);
+vertex(280, 242);
+vertex(275, 230);
+endShape(CLOSE);
+// right eye internal
+beginShape();
+fill(0);
+vertex(365, 228);
+vertex(370, 240);
+vertex(375, 250);
+vertex(390, 242);
+vertex(385, 230);
+endShape(CLOSE);
+//under eye left
+beginShape();
+fill(190);
+vertex(350, 241);
+vertex(375, 250);
+vertex(397, 243);
+vertex(375, 260);
+endShape(CLOSE);
+//under eye right
+beginShape();
+fill(190);
+vertex(240, 241);
+vertex(265, 250);
+vertex(287, 243);
+vertex(265, 260);
+endShape(CLOSE);
+// glasses right lens
+strokeJoin(ROUND); // Rounded the stroke corners
+noFill();
+rect(343, 209, 90, 70);
+strokeJoin(ROUND); // Rounded the stroke corners
+noFill();
+rect(344, 211, 90, 70);
+//glasses left lens
+strokeJoin(ROUND); // Rounded the stroke corners
+noFill();
+rect(200, 209, 90, 70);
+strokeJoin(ROUND); // Rounded the stroke corners
+noFill();
+rect(202, 211, 90, 70);
+//nose bridge
+beginShape();
+fill(0);
+vertex(290, 255);
+vertex(297, 240);
+vertex(335, 240);
+vertex(343, 255);
+vertex(343, 260);
+vertex(335, 245);
+vertex(297, 245);
+endShape(CLOSE);
+beginShape();
+//right glasses arm
+fill(0);
+vertex(433, 220);
+vertex(470, 225);
+vertex(470, 230);
+vertex(433, 230);
+endShape(CLOSE);
+//hoodie grommet right
+fill(150);
+ellipse(430, 505, 10, 10);
+//hoodie grommet left
+fill(150);
+ellipse(240, 470, 10, 10);
+beginShape();
+//right hoodie drawstring
+fill(0);
+vertex(435, 505);
+vertex(425, 505);
+vertex(425, 600);
+vertex(435, 600);
+endShape(CLOSE);
+beginShape();
+//left hoodie drawstring
+fill(0);
+vertex(245, 470);
+vertex(235, 470);
+vertex(235, 600);
+vertex(245, 600);
+endShape(CLOSE);
+//earring
+rect(461, 305, 7, 19);
+//adding freckles (IN PROGRESS)
+point(250, 270);
+point(230, 260);
+point(275, 265);
+point(245, 255);
+point(310, 280);
+point(320, 265);
+point(230, 250);
+point(300, 280);
+point(335, 280);
+point(350, 260);
+point(365, 270);
+point(355, 290);
+point(380, 270);
+point(395, 260);
+point(410, 250);
+point(405, 270);
+point(420, 265);
+//hair on right side, upper
+fill(20);
+triangle(440, 160, 440, 200, 445, 170); //topmost strand
+triangle(445, 170, 445, 240, 460, 200); //middle strand
+triangle(460, 200, 454, 260, 465, 210); //last strand
+//hair on right side, lower
+fill(20);
+triangle(457, 300, 454, 330, 460, 360); //far right strand
+beginShape();
+//hair on right lower side continued
+fill(20);
+vertex(455, 300);
+vertex(460, 320);
+vertex(445, 365);
+endShape(CLOSE);
+}</pre>
+</div>
+
+</body>
+</html>
